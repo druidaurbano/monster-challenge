@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Geolocation, GeolocationPosition } from '@capacitor/geolocation';
+import { Geolocation } from '@capacitor/geolocation';
 
 @Component({
   selector: 'app-gps',
@@ -7,35 +7,25 @@ import { Geolocation, GeolocationPosition } from '@capacitor/geolocation';
   styleUrls: ['./gps.component.scss']
 })
 export class GpsComponent {
-  loc: GeolocationPosition | undefined;
+  lat: string = '';
+  lng: string = '';
+  coordinates: any;
 
   constructor() {
 
   }
 
   ngOnInit() {
-    this.printCurrentPosition();
-    //this.getCurrentPosition();
+    this.getCurrentPosition();
   }
-
-  printCurrentPosition = async () => {
-    console.log('searching position');
-    const coordinates = await Geolocation.getCurrentPosition();
-
-    console.log('Current position:', coordinates);
-  };
 
   async getCurrentPosition() {
     console.log('getting current position');
-    this.loc = await Geolocation.getCurrentPosition();
-    console.log('show mt the loc', this.loc);
+    const location = await Geolocation.getCurrentPosition();
+    console.log('show mt the loc', location);
+    if(location) {
+      this.coordinates = location;
+    }
   }
-
-  /* async printCurrentPosition() {
-    console.log('searching location');
-    const coordinates = await Geolocation.getCurrentPosition();
-
-    console.log('Current position: ', coordinates);
-  } */
 
 }
