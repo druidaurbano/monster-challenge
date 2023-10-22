@@ -1,0 +1,7 @@
+<div class="footer-container">
+  <ul class="list-button">
+    <button class="button-footer" *ngFor="let buttonItem of buttonList" (click)="changeScreen(buttonItem)">
+      <span>{{buttonItem.name}}</span>
+    </button>
+  </ul>
+</div>

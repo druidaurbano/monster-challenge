@@ -1,0 +1,27 @@
+.footer-container {
+  width: 100%;
+  height: 80px;
+  border-radius: 16px;
+  background-color: #B3BAC3;
+  //margin: 0 8px;
+
+  .list-button {
+    //width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .button-footer {
+      width: 20%;
+      height: 80%;
+      padding: 0;
+      border-radius: 32px;
+      border: none;
+      background: #001A38;
+      color: #FFFFFF;
+    }
+  }
+}
