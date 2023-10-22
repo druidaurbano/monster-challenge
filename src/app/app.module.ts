@@ -8,6 +8,7 @@ import { GpsModule } from './components/gps/gps.module';
 import { NotificationModule } from './components/notification/notification.module';
 import { CameraModule } from './components/camera/camera.module';
 import { FooterModule } from './components/footer/footer.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterModule } from './components/footer/footer.module';
     GpsModule,
     NotificationModule,
     CameraModule,
-    FooterModule
+    FooterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

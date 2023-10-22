@@ -5,7 +5,8 @@ const config: CapacitorConfig = {
   appName: 'monster-challenge',
   webDir: 'dist/monster-challenge',
   server: {
-    androidScheme: 'https'
+    url: 'http://192.168.3.218:4200',
+    cleartext: true
   }
 };
 

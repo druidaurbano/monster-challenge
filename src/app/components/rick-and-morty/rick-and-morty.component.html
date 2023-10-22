@@ -1,1 +1,8 @@
-<p>rick-and-morty works!</p>
+<div class="ram-container">
+  <ul class="characters-list">
+    <button class="character-item" *ngFor="let item of charactersList">
+      <img src="{{item.thumbnail}}">
+      <span>{{item.name}}</span>
+    </button>
+  </ul>
+</div>
