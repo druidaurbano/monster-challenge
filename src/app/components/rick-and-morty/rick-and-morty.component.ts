@@ -10,18 +10,39 @@ import { DatabaseService } from 'src/app/services/database.service';
 })
 export class RickAndMortyComponent implements OnInit {
   charactersList: Array<Character> = [];
+  filterList: Array<any> = [];
 
   constructor(
     private api: ApiService,
     private database: DatabaseService
   ) {
-
+    this.filterList = [
+      {id: 0, name: 'Characters'},
+      {id: 1, name: 'Locations'},
+      {id: 2, name: 'Episodes'},
+    ];
   }
 
   ngOnInit() {
     this.getCharacters();
     this.getLocations();
     this.getEpisodes();
+  }
+
+  ngAfterViewInit() {
+    this.selectFilter('0');
+  }
+
+  selectFilter(id: any) {
+    document.getElementById(`${id}-fb`)?.classList.add('selected');
+  }
+
+  unselectFilter() {
+    document.getElementById('selected')?.classList.remove();
+  }
+
+  changeFilter(item: any) {
+    console.log('filtro selecionado', item);
   }
 
   getCharacters() {

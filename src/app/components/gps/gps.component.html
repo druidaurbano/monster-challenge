@@ -1,6 +1,10 @@
 <div class="gps-container">
-  <span *ngIf="coordinates">Latitude: {{coordinates.coords.latitude}}</span>
-  <span *ngIf="coordinates">Longitude: {{coordinates.coords.longitude}}</span>
-
-  <!-- <span *ngIf="coordinates">Coordinates: {{coordinates}}</span> -->
+  <section *ngIf="!coordinates">
+    <span>Procurando sua localização</span>
+  </section>
+  <section *ngIf="coordinates">
+    <h2>Sua localização</h2>
+    <span>Latitude: {{coordinates.coords.latitude}}</span>
+    <span>Longitude: {{coordinates.coords.longitude}}</span>
+  </section>
 </div>

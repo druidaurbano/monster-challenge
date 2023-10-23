@@ -13,20 +13,24 @@ export class FooterComponent {
     this.buttonList = [
       {
         id: 0,
-        name: 'Rick and Morty'
+        name: 'Rick and Morty',
+        icon: 'logo-electron'
       },
       {
         id: 1,
-        name: 'GPS'
+        name: 'GPS',
+        icon: 'pin-outline'
       },
       {
         id: 2,
-        name: 'Notification'
+        name: 'Notification',
+        icon: 'notifications-outline'
       },
       {
         id: 3,
-        name: 'Camera'
-      },
+        name: 'Camera',
+        icon: 'camera-outline'
+      }
     ];
   }
 

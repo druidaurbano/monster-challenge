@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'monster-challenge';
-  step: 'start' | 'gps' | 'notification' | 'camera' = 'start';
+  step: 'start' | 'gps' | 'notification' | 'camera' = 'camera';
   constructor() {
 
   }

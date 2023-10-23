@@ -9,6 +9,7 @@ import { NotificationModule } from './components/notification/notification.modul
 import { CameraModule } from './components/camera/camera.module';
 import { FooterModule } from './components/footer/footer.module';
 import { HttpClientModule } from '@angular/common/http';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     NotificationModule,
     CameraModule,
     FooterModule,
-    HttpClientModule
+    HttpClientModule,
+    IonicModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

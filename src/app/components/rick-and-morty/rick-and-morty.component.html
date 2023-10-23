@@ -1,4 +1,13 @@
 <div class="ram-container">
+  <ul class="filter-list">
+    <button class="filter-button"
+            id="{{filterItem.id}}-fb"
+            *ngFor="let filterItem of filterList"
+            (clicK)="changeFilter(filterItem)">
+      <span>{{filterItem.name}}</span>
+    </button>
+  </ul>
+
   <ul class="characters-list">
     <button class="character-item" *ngFor="let item of charactersList">
       <img src="{{item.thumbnail}}">
