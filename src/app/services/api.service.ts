@@ -11,18 +11,24 @@ export class ApiService {
     private http: HttpClient
   ) { }
 
-  getCharacters(): Observable<any[]> {
+  getCharacters(page?: number): Observable<any[]> {
+    if(!page)
+      page = 1;
     console.log('getting characters');
-    return this.http.get<any[]>(`https://rickandmortyapi.com/api/character/`);
+    return this.http.get<any[]>(`https://rickandmortyapi.com/api/character/?page=${page}`);
   }
 
-  getLocations(): Observable<any[]> {
+  getLocations(page?: number): Observable<any[]> {
+    if(!page)
+      page = 1;
     console.log('getting locations');
-    return this.http.get<any[]>(`https://rickandmortyapi.com/api/location/`);
+    return this.http.get<any[]>(`https://rickandmortyapi.com/api/location/?page=${page}`);
   }
-  getEpisodes(): Observable<any[]> {
+  getEpisodes(page?: number): Observable<any[]> {
+    if(!page)
+      page = 1;
     console.log('getting episodes');
-    return this.http.get<any[]>(`https://rickandmortyapi.com/api/episode/`);
+    return this.http.get<any[]>(`https://rickandmortyapi.com/api/episode/?page=${page}`);
   }
 
 }

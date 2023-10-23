@@ -14,7 +14,7 @@ export class FooterComponent {
       {
         id: 0,
         name: 'Rick and Morty',
-        icon: 'logo-electron'
+        icon: 'rick-and-morty'
       },
       {
         id: 1,

@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RickAndMortyComponent } from './rick-and-morty.component';
+import { IonicModule } from '@ionic/angular';
 
 
 
 @NgModule({
   declarations: [RickAndMortyComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
   ],
   exports: [
     RickAndMortyComponent
